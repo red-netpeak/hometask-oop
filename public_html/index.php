@@ -10,7 +10,7 @@
       $tmp = (string) $number;
       $tmp = explode('.', $tmp);
 
-      $this->firstPart = (int) $tmp[0];
+      $this->firstPart = round((float) $tmp[0]);
       $this->lastPart  = (int) $tmp[1];
     }
 
@@ -39,7 +39,6 @@
 
     public function compare()
     {
-
       if ($this->firstPart > $this->lastPart) {
         $result = $this->firstPart . " > " .$this->lastPart ;
       }
@@ -54,6 +53,6 @@
     }
   }
 
-  $class = new Fractions(-3.3);
+  $class = new Fractions(-23.29);
   $class->main();
  ?>
